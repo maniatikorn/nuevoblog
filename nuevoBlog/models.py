@@ -8,9 +8,12 @@ from django.template.defaultfilters import slugify
 class Articulo(models.Model):
 	titulo = models.CharField(max_length=200)
 	contenido = models.TextField()
-	imagen = models.ImageField(upload_to="nuevoBlog/images-articles/")
+	imagen = models.ImageField(upload_to="nuevoBlog/static/images-articles/")
 	slug = models.SlugField(editable=False)
-	fecha = models.DateField()
+	fecha = models.DateTimeField()
+
+	class Meta:
+		ordering = ["-fecha"]
 
 	def __unicode__(self):
 		return self.titulo

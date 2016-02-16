@@ -1,0 +1,306 @@
+@import 'nib'
+@import 'normalize.styl'
+@import 'fonts.styl'
+
+/*Paleta de colores*/
+blancoAzul = #e8e8f0
+blancoAmarillo = #fbf6ce
+verder = #a1c436
+azul = #46a5e5
+azumMarino = #182945
+azulFacebook = #3b5998
+azulTwitter = #55acee
+rojoGoogle = #d34836
+amarilloBoton = #ff931e
+cafe = #8c6239
+
+a
+	color azumMarino
+	font-family 'Roboto', sans-serif
+	font-size 1em
+	font-weight 700
+	text-decoration underline
+	&:hover
+		color verder
+		text-decoration none
+	&:visited
+		color azumMarino
+
+body
+	background-color azumMarino
+	font-family 'Roboto', sans-serif
+	font-size 16px
+	font-weight 300
+	width 100%
+
+h1
+	padding 0
+	margin 0
+	color blancoAzul
+	font-weight 400
+	text-shadow 2px 2px azumMarino
+	font-size 24px
+	display block
+
+header
+	background-image url('../images/header-background.jpg')
+	background-position center
+	display inline-block
+	height 350px
+	margin 0
+	padding 0
+	text-align center
+	width 100%
+    background-size cover
+
+header figure
+	display inline-block
+	margin auto
+	padding 0
+	text-align center
+	
+header figure img
+	border-radius 500px
+	overflow hidden
+	padding .5rem
+	text-align center
+	width 150px
+
+header nav ul
+	margin 0
+	padding 0
+
+header nav ul li
+	display inline-block
+	text-decoration none
+
+iframe
+	display inline-block
+
+footer
+	background-color azumMarino
+	color blancoAzul
+	padding 2em 0
+	text-align center
+	width 100%
+
+form
+	display inline-block
+	margin 0
+	padding 0
+	/*background-color blancoAmarillo*/
+
+section article h2
+	margin 0
+	padding 0 0
+
+p
+	line-height 25px
+	padding 0 1em
+
+.Blog
+	background-color azumMarino
+	width 100%
+
+.buttonYellow
+	background-color amarilloBoton
+	border-bottom 5px solid cafe	
+	border-radius 5px 
+	margin 0 .5em
+	padding .5em 1.2em  
+	width 100px
+	color azumMarino
+	text-decoration underline
+	font-weight 400
+	&:hover
+		background-color azumMarino
+		border-bottom 5px solid verder
+		font-weight 700
+		color verder
+
+.campo
+	border 1px solid cafe
+	border-radius 5px
+	margin .2em 0
+	padding .4em .3em
+	width 90%
+
+.date-item
+	font-style italic
+	text-align center
+	color cafe
+
+.generalContainer
+	margin 0
+	padding 0
+	width 100%
+
+.image-item
+	margin 0
+	padding 0
+
+.image-item img
+	width 100%
+
+.info
+	background rgba( 24, 41, 69, .5)
+	display inline-block
+	height 350px
+	width 100%
+
+.item 
+	background-color blancoAzul
+	/*border-bottom 1px solid azumMarino*/
+	border-radius 2px
+	padding 0em .5em 1.2em .5em
+	margin 0em 0em .5em 0
+	box-sizing border-box
+	width 100%
+
+.title-item
+	font-style italic
+	display block
+	text-align center
+	padding .3em 0
+ 	
+.socialLinkButton
+	border-radius 100px
+	display inline-block
+	height 28px
+	margin 0 .5em .5em .7em
+	overflow hidden
+	width 28px
+
+.subtitle
+	padding 0
+	margin 0 0 .8em 0
+	color blancoAmarillo
+
+.twitterButton
+	background-color azulTwitter
+	color white
+	font-size 1.6em
+	padding .3em
+	&:hover
+		color gray
+		background-color black
+		animation .10s pAnimacion
+
+.mejorandoButton
+	background-color azulFacebook
+	color white
+	font-size 1.6em
+	padding .3em
+	&:hover
+		color gray
+		background-color black
+		animation .5s pAnimacion
+
+.githubButton
+	background-color black
+	color white
+	font-size 1.6em
+	padding .3em
+	&:hover
+		color gray
+		background-color black
+		animation .5s pAnimacion
+
+.googleButton
+	background-color rojoGoogle
+	color white
+	font-size 1.6em
+	padding .3em
+	&:hover
+		color gray
+		background-color black
+		animation 2s pAnimacion infinite
+
+.text-item
+	line-height 25px
+	padding 0 1em
+
+.suscribeBlog
+	display block
+	margin 0 auto
+	padding .7em 0
+	text-align center
+	width 100%
+	background-color blancoAmarillo
+
+@keyframes pAnimacion
+	0%
+		background-color blancoAzul
+	100%
+		background-color black
+
+@media screen and (min-width: 760px)
+	form
+		display inline-block
+	p 
+		padding 0 3em
+
+	.Blog
+		text-align center
+
+	.campo
+		width 30%
+		display inline-block
+
+	.info
+		float left
+		width 350px
+
+	.item
+		border 0
+		display inline-block
+		width 100%
+		/*max-height 450px*/
+		overflow hidden
+		text-align left
+
+	.text-item
+		text-align left
+
+	.triangle
+		border-bottom 350px solid azumMarino
+		border-bottom-color rgba( 24, 41, 69, .5)
+		border-radius 0
+		border-right 50px solid transparent
+		display inline-block
+		float left
+		height 0
+		margin 0
+		width 0
+
+	.suscribeBlog
+		display inline-block
+		width 100%
+@media screen and (min-width: 1000px)
+	header
+		float left
+		display inline-block
+		width 100%
+
+	nav
+		display inline-block
+
+	.info
+		width 100%
+		transition background .5s linear .5s
+		&:hover
+			background rgba( 24, 41, 69, 0)
+	
+	.item
+		padding 1em 8em
+			
+	.triangle
+		display none
+
+	.socialLinks
+		display block
+
+	.suscribeBlog
+		float left
+		width 100%
+		display inline-block

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	{% load staticfiles %}
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/estilos.css" %}" />
+	<link rel="icon" type="image/jpeg" href="{% static "images/icon-logo.jpg" %}" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css' />
+	<title>Juan C Pablo</title>
+</head>
+<body>
+	<div class="generalContainer">
+		<header>
+			<div class="info">
+				<figure>
+					<img src="{% static "images/profile-picture.jpg" %}"></img>
+				</figure>
+				<h1>Juan C. Pablo</h1>
+				<p class="subtitle">Web developer</p>
+				<div class="socialLinks">
+					<a href="http://www.twitter.com/maniatikorn"><div class="socialLinkButton twitterButton icon-twitter"></div></a>
+					<a href="http://www.github.com/maniatikorn"><div class="socialLinkButton githubButton icon-github"></div></a>
+					<a href="https://plus.google.com/+JuanCP/posts"><div class="socialLinkButton googleButton icon-googleplus"></div></a>
+				</div>
+				<nav>
+					<ul>
+						<li class="buttonYellow"><a href="http://www.jcarlos.in">Blog</a></li>
+						<!--<li class="buttonYellow">Portafolio</li>-->
+					</ul>
+				</nav>
+			</div>
+			<div class="triangle">
+			</div>
+		</header>
+		<div class="suscribeBlog">
+			¡Avísame de los nuevos artículos¡. 
+			<form action="" id="formulario" class="formulario">
+				<input type="text" id="titulo" placeholder="Nombre:" required class="campo" />
+				<input type="mail" id="url" placeholder="Mail:" required class="campo" />
+				<input type="submit" value="Avísame" class="buttonYellow">
+			</form>
+		</div>
+		<section class="Blog">
+			{% block content %}
+			
+			{% endblock %}
+		</section>
+	</div>
+	<footer>
+		2014.
+	</footer>
+</body>
+</html>

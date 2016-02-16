@@ -1,0 +1,10 @@
+{% extends "base.html" %}	
+	{% block content %}
+		{% for entrada in object_list %}
+			<article class="item">
+				<h2 class="title-item"><a href="blog/{{ entrada.slug }}">{{ entrada.titulo }}</a></h2>	
+				<p class="text-item">{{ entrada.contenido }}</p>
+			</article>
+		{% endfor %}
+	{% endblock %}
+

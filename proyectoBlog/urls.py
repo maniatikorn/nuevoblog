@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf import settings
+from nuevoBlog.views import IndexView, ArticuloDetailView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', IndexView.as_view()),
+    url(r'^blog/(?P<slug>[-\w]+)/$', ArticuloDetailView.as_view()),
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+    	{'document_root': settings.MEDIA_ROOT, } ),    
 ]

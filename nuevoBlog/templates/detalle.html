@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 	{% block content %}
 		<article class="item">
-			<img src="{{ object.imagen }}">
+			<img src="{{ object.imagen.url }}">
 
 			<h2>{{ object.titulo }}</h2>
 			<p>{{ object.contenido }}</p>
